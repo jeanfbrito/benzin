@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  numberplate: MyString
+  brand: MyString
+  model: MyString
+  fabrication: 1
+
+two:
+  numberplate: MyString
+  brand: MyString
+  model: MyString
+  fabrication: 1

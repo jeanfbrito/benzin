@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  date: 2015-07-06
+  mileage: 1
+  liter_price: 9.99
+  liters: 1.5
+  gas_station: MyString
+  average_consumption: 1.5
+  traveled_mileage: 1
+  total_value: 9.99
+  vehicle_id: 
+
+two:
+  date: 2015-07-06
+  mileage: 1
+  liter_price: 9.99
+  liters: 1.5
+  gas_station: MyString
+  average_consumption: 1.5
+  traveled_mileage: 1
+  total_value: 9.99
+  vehicle_id: 
