@@ -5,8 +5,8 @@ class RefuellingsController < ApplicationController
   # GET /refuellings
   # GET /refuellings.json
   def index
-    @refuellings = Refuelling.all
-    # @refuellings = @vehicle.refuellings.order('date desc')
+    #@refuellings = Refuelling.all
+    @refuellings = @vehicle.refuellings.order('date desc')
   end
 
   # GET /refuellings/1
