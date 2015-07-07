@@ -1,10 +1,12 @@
 class RefuellingsController < ApplicationController
   before_action :set_refuelling, only: [:show, :edit, :update, :destroy]
+  before_filter :find_vehicle
 
   # GET /refuellings
   # GET /refuellings.json
   def index
     @refuellings = Refuelling.all
+    # @refuellings = @vehicle.refuellings.order('date desc')
   end
 
   # GET /refuellings/1
@@ -59,6 +61,10 @@ class RefuellingsController < ApplicationController
       format.html { redirect_to refuellings_url, notice: 'Refuelling was successfully destroyed.' }
       format.json { head :no_content }
     end
+  end
+
+  def find_vehicle
+    @vehicle = Vehicle.find(params[:vehicle_id])
   end
 
   private

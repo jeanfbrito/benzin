@@ -46,3 +46,4 @@ end
 
 gem 'simple_form'
 gem 'bootstrap-generators', '~> 3.3.4'
+

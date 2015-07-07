@@ -15,6 +15,7 @@
             <th>Model</th>
             <th>Fabrication</th>
             <th></th>
+            <th></th>
         <th></th>
         <th></th>
       </tr>
@@ -26,6 +27,7 @@
             <td><%= vehicle.brand %></td>
             <td><%= vehicle.model %></td>
             <td><%= vehicle.fabrication %></td>
+            <td><%= link_to 'Abastecimentos', vehicle_refuellings_path(vehicle) %></td>
             <td><%= link_to 'Show', vehicle %></td>
         <td><%= link_to 'Edit', edit_vehicle_path(vehicle) %></td>
         <td><%= link_to 'Destroy', vehicle, method: :delete, data: { confirm: 'Are you sure?' } %></td>

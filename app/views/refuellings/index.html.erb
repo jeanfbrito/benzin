@@ -1,5 +1,5 @@
 <div class="page-header">
-  <%= link_to new_refuelling_path, class: 'btn btn-primary' do %>
+  <%= link_to new_vehicle_refuelling_path, class: 'btn btn-primary' do %>
     <span class="glyphicon glyphicon-plus"></span>
     New Refuelling
   <% end %>
@@ -20,8 +20,6 @@
             <th>Total value</th>
             <th>Vehicle</th>
             <th></th>
-        <th></th>
-        <th></th>
       </tr>
     </thead>
 
@@ -36,9 +34,7 @@
             <td><%= refuelling.traveled_mileage %></td>
             <td><%= refuelling.total_value %></td>
             <td><%= refuelling.vehicle %></td>
-            <td><%= link_to 'Show', refuelling %></td>
-        <td><%= link_to 'Edit', edit_refuelling_path(refuelling) %></td>
-        <td><%= link_to 'Destroy', refuelling, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Edit', edit_vehicle_refuelling_path(@vehicle, refuelling) %></td>
       <% end %>
     </tbody>
   </table>

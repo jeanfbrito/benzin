@@ -1,9 +1,12 @@
 Rails.application.routes.draw do
-  resources :refuellings
-  resources :refuellings
-  resources :refuellings
-  resources :refuellings
-  resources :vehicles
+
+  resources :vehicles do
+    resources :refuellings
+    #resources :maintenances do
+    #  resources :documents
+    #end
+  end
+  
   resources :posts
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
