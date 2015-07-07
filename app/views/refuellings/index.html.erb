@@ -3,6 +3,11 @@
     <span class="glyphicon glyphicon-plus"></span>
     New Refuelling
   <% end %>
+  
+  <%= link_to vehicles_path, class: 'btn btn-default' do %>
+    <span class="glyphicon glyphicon-list-alt"></span>
+    Back to vehicles
+  <% end %>
   <h1>Listing refuellings</h1>
 </div>
 
@@ -18,7 +23,6 @@
             <th>Average consumption</th>
             <th>Traveled mileage</th>
             <th>Total value</th>
-            <th>Vehicle</th>
             <th></th>
       </tr>
     </thead>
@@ -33,7 +37,6 @@
             <td><%= refuelling.average_consumption %></td>
             <td><%= refuelling.traveled_mileage %></td>
             <td><%= refuelling.total_value %></td>
-            <td><%= refuelling.vehicle %></td>
         <td><%= link_to 'Edit', edit_vehicle_refuelling_path(@vehicle, refuelling) %></td>
       <% end %>
     </tbody>

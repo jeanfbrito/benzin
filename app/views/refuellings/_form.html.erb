@@ -1,4 +1,4 @@
-<%= simple_form_for(@refuelling, html: { class: "form-horizontal", role: "form" }) do |f| %>
+<%= simple_form_for([@vehicle, @refuelling], url: vehicle_refuellings_path, html: { class: "form-horizontal", role: "form" }) do |f| %>
   <% if @refuelling.errors.any? %>
     <div class="alert alert-danger alert-dismissable" role="alert">
       <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
@@ -37,34 +37,15 @@
     </div>
   </div>
   <div class="form-group">
-    <%= f.label :gas_station, class: "col-sm-2 control-label" %>
-    <div class="col-sm-10">
-      <%= f.text_field :gas_station, class: "form-control" %>
-    </div>
-  </div>
-  <div class="form-group">
-    <%= f.label :average_consumption, class: "col-sm-2 control-label" %>
-    <div class="col-sm-10">
-      <%= f.text_field :average_consumption, class: "form-control" %>
-    </div>
-  </div>
-  <div class="form-group">
-    <%= f.label :traveled_mileage, class: "col-sm-2 control-label" %>
-    <div class="col-sm-10">
-      <%= f.number_field :traveled_mileage, class: "form-control" %>
-    </div>
-  </div>
-  <div class="form-group">
     <%= f.label :total_value, class: "col-sm-2 control-label" %>
     <div class="col-sm-10">
       <%= f.text_field :total_value, class: "form-control" %>
     </div>
   </div>
   <div class="form-group">
-    <%= f.label :vehicle, class: "col-sm-2 control-label" %>
+    <%= f.label :gas_station, class: "col-sm-2 control-label" %>
     <div class="col-sm-10">
-      <%= f.text_field :vehicle, class: "form-control" %>
-      <%= f.association :vehicle, class: "form-control"  %>
+      <%= f.text_field :gas_station, class: "form-control" %>
     </div>
   </div>
   <div class="form-group">

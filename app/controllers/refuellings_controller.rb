@@ -16,7 +16,8 @@ class RefuellingsController < ApplicationController
 
   # GET /refuellings/new
   def new
-    @refuelling = Refuelling.new
+    #@refuelling = Refuelling.new
+    @refuelling = @vehicle.refuellings.new
   end
 
   # GET /refuellings/1/edit
@@ -26,11 +27,11 @@ class RefuellingsController < ApplicationController
   # POST /refuellings
   # POST /refuellings.json
   def create
-    @refuelling = Refuelling.new(refuelling_params)
+    @refuelling = @vehicle.refuellings.new(refuelling_params)
 
     respond_to do |format|
       if @refuelling.save
-        format.html { redirect_to @refuelling, notice: 'Refuelling was successfully created.' }
+        format.html { redirect_to [@vehicle, :refuellings], notice: 'Refuelling was successfully created.' }
         format.json { render :show, status: :created, location: @refuelling }
       else
         format.html { render :new }
